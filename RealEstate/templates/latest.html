@@ -1,0 +1,25 @@
+
+{% for t in LatestProperties %}
+
+{% if LatestProperties.count == 3 %}
+<div class="col-md-4 box-shadow1 animationForBack{{ forloop.counter }}">
+    {% elif LatestProperties.count == 2 %}
+    <div class="col-md-6 animationForBack{{ forloop.counter }}">
+        {% else %}
+          <div class="col-md-12 animationForBack{{ forloop.counter }}">
+        {% endif %}
+<br>
+<div align="center" ><p class="shadow4">{{t.name}}</p>
+</div>
+<div align="center"><a href="/propertyDetails/?id={{ t.id }}"><img src="/media/{{ t.img1 }}" width="220" height="220"></a>
+</div>
+{% if item.showPrice %}
+<div align="center" class="text-font">السعر:&nbsp&nbsp{{t.price}}
+</div>
+{% endif %}
+<div align="center"><a class="link-font" href="/propertyDetails/?id={{ t.id }}"  > تفاصيل إضافية</a>
+</div>
+<br>
+</div>
+
+{% endfor %}

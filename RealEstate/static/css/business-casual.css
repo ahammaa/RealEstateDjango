@@ -1,0 +1,606 @@
+/*!
+ * Start Bootstrap - Business Casual (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+body {
+    font-family: 'Droid Arabic Kufi', serif;
+    background: url('../img/bg1.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    font-family: 'Droid Arabic Kufi', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.25em;
+    line-height: 1.6;
+    color: #000;
+}
+
+hr {
+    max-width: 400px;
+    border-color: #999999;
+}
+
+.brand,
+.address-bar {
+    display: none;
+}
+
+.navbar-brand {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.navbar-nav {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color:red;
+    direction:rtl;
+
+}
+
+.contact-us{
+    background: url('../img/bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    min-height:300px
+    }
+.contact-us .fields
+{
+	background:rgba(9,9,9,0.8);
+	min-height:300px;
+	color:#DDD;
+	padding-top:40px;
+	padding-bottom:40px
+}
+
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+*[role="form"] h2 {
+    margin-left: 5em;
+    margin-bottom: 1em;
+}
+
+
+.img-full {
+    min-width: 100%;
+}
+
+.brand-before,
+.brand-name {
+    text-transform: capitalize;
+}
+
+.brand-before {
+    margin: 15px 0;
+}
+
+.brand-name {
+    margin: 0;
+    font-size: 4em;
+}
+
+.tagline-divider {
+    margin: 15px auto 3px;
+    max-width: 250px;
+    border-color: #999999;
+}
+
+.box {
+    margin-bottom: 20px;
+    padding: 30px 15px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+.intro-text {
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.img-border {
+    float: none;
+    margin: 0 auto 0;
+    border: #999999 solid 1px;
+}
+
+.img-left {
+    float: none;
+    margin: 0 auto 0;
+}
+
+footer {
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+    height:110px;
+    background-image: url('../img/f8.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+footer p {
+    margin: 0;
+    padding: 0 0;
+}
+
+@media screen and (min-width:768px) {
+    .brand {
+        display: inherit;
+        margin: 0;
+        padding: 30px 0 10px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        font-family: 'Droid Arabic Kufi', serif;
+        font-size: 5em;
+        font-weight: 700;
+        line-height: normal;
+        color: #fff;
+    }
+
+    .top-divider {
+        margin-top: 0;
+    }
+
+    .img-left {
+        float: left;
+        margin-right: 25px;
+    }
+
+    .address-bar {
+        display: inherit;
+        margin: 0;
+        padding: 0 0 40px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        text-transform: uppercase;
+        font-size: 1.25em;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: #fff;
+    }
+
+    .navbar {
+        border-radius: 0;
+        float: right;
+    }
+
+    .navbar-header {
+        display: none;
+        float: right;
+    }
+
+    .navbar {
+        min-height: 0;
+        float: right;
+    }
+
+    .navbar-default {
+        border: none;
+        background: #fff;
+        background: rgba(255,255,255,0.9);
+    }
+
+    .nav>li>a {
+        padding: 10px;
+        float: right;
+    }
+
+    .navbar-nav>li>a {
+        line-height: normal;
+        padding: 10px 10px;
+        background-color: #000033;
+        box-shadow:#d0d0d0 0px 0px 0px 1px;
+        direction:rtl;
+
+/*
+        width:130px;
+        background-color: #E8E8FF;
+        color:#000033;
+        */
+    }
+
+    .navbar-nav {
+        display: table;
+        float: right;
+        margin: 0 auto;
+        table-layout: fixed;
+        font-size: 0.75em;
+        font-family: 'Droid Arabic Kufi', serif;
+        font-weight:bold;
+        color:#000033;
+
+        border-collapse:collapse;
+        border-radius:.25em;
+        box-shadow:#d0d0d0 0px 0px 0px 1px;
+        direction:rtl;
+
+    }
+}
+
+#bs-example-navbar-collapse-1
+{
+ /* overflow-y: scroll !important;
+ max-height: 300px !important;
+ */
+ max-height: 200px !important;
+    overflow: hidden !important;
+    overflow-y: auto !important;
+}
+
+@media screen and (min-width:1200px) {
+    .box:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.right-text {
+  text-align: center;
+  font-family: 'Droid Arabic Kufi', serif;
+}
+
+.spacing-table {
+  font-family: 'Droid Arabic Kufi', serif;
+  font-size: 15px;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 90%;
+  border-spacing: 0 5px; /* this is the ultimate fix */
+}
+.spacing-table th {
+  text-align: left;
+  padding: 5px 15px;
+}
+.spacing-table td {
+  border-width: 2px 0;
+  width: 70%;
+  border-color: #000033;
+  border-style: solid;
+
+  background:#e8edff;
+  /*border-bottom:1px solid #fff;*/
+  color:#000033;
+  /* border-top:1px solid transparent;*/
+  /* padding:8px; */
+  text-align:center;
+
+  /*color: black;*/
+  padding: 5px 15px;
+
+}
+.spacing-table td:first-child {
+  border-left-width: 3px;
+  border-radius: 5px 0 0 5px;
+}
+.spacing-table td:last-child {
+  border-right-width: 3px;
+  border-radius: 0 5px 5px 0;
+}
+.spacing-table thead {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+
+}
+.spacing-table thead td {
+  background-color:#000033;
+  color:#ffffff;
+}
+
+
+.spacing-table thead a {
+  color:#ffffff;
+}
+.spacing-table thead a:hover {
+  color:#CCCCCC;
+}
+
+.spacing-table tbody {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 0 10px;
+}
+
+
+.form-style-3{
+    max-width: 500px;
+    min-width: 300px;
+    font-family: 'Droid Arabic Kufi', serif;
+    margin-right: 5px;
+}
+.form-style-3 label{
+    display:block;
+    margin-bottom: 10px;
+
+}
+.form-style-3 label > span{
+    float: left;
+    width: 100px;
+    color: #F072A9;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.form-style-3 fieldset{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid #350000;
+    padding: 20px;
+    background: #E8E8FF;
+    box-shadow: inset 0px 0px 15px #FFE5E5;
+    -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+    -webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+.form-style-3 fieldset legend{
+    color: #000033;
+    border-top: 1px solid #350000;
+    border-left: 1px solid #350000;
+    border-right: 1px solid #350000;
+    border-buttom: 1px solid #350000;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    background: #E8E8FF;
+    padding: 0px 8px 3px 8px;
+    box-shadow: -0px -1px 2px #350000;
+    -moz-box-shadow:-0px -1px 2px #350000;
+    -webkit-box-shadow:-0px -1px 2px #350000;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'Droid Arabic Kufi', serif;
+    text-align: center;
+
+}
+.form-style-3 textarea{
+    width:250px;
+    height:100px;
+}
+.form-style-3 input[type=text],
+.form-style-3 input[type=select],
+.form-style-3 input[type=date],
+.form-style-3 input[type=datetime],
+.form-style-3 input[type=number],
+.form-style-3 input[type=search],
+.form-style-3 input[type=time],
+.form-style-3 input[type=url],
+.form-style-3 input[type=email],
+.form-style-3 select,
+.form-style-3 textarea{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid #350000;
+    outline: none;
+    color: #000033;
+    padding: 5px 8px 5px 8px;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+    background: #FFEFF6;
+    width:70%;
+    text-align: right;
+}
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+    background: #000033;
+    border: 1px solid #E8E8FF;
+    padding: 5px 45px 5px 45px;
+    color: #FFFFFF;
+    box-shadow: inset -1px -1px 3px #E8E8FF;
+    -moz-box-shadow: inset -1px -1px 3px #E8E8FF;
+    -webkit-box-shadow: inset -1px -1px 3px #E8E8FF;
+    border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-weight: bold;
+    font-family: 'Droid Arabic Kufi', serif;
+}
+.required{
+    color:red;
+    font-weight:normal;
+}
+
+
+.title-font {
+        font-size: 14;
+        font-family: 'Droid Arabic Kufi', serif;
+        font-weight:bold;
+    }
+
+.text-font {
+        font-size: 12;
+        font-family: 'Droid Arabic Kufi', serif;
+    }
+.small-text-font {
+        font-size: 10;
+        font-family: 'Droid Arabic Kufi', serif;
+    }
+.link-font {
+        font-size: 12;
+        font-family: 'Droid Arabic Kufi', serif;
+        text-decoration:underline;
+        color:red;
+    }
+
+
+.box-table-a{
+    font-family: 'Droid Arabic Kufi', serif;
+    font-size:14px;
+
+    text-align:right;
+    border-collapse:collapse;
+
+
+}
+.box-table-a th{
+    font-size:15px;
+    font-weight:normal;
+    background:#b9c9fe;
+    border-top:4px solid #aabcfe;
+    border-bottom:1px solid #fff;
+    color:#000033;
+    padding:8px;
+    text-align:center;
+
+}
+.box-table-a td{
+    background:#e8edff;
+    border-bottom:1px solid #fff;
+    color:#000033;
+    border-top:1px solid transparent;
+    padding:8px;
+    text-align:center;
+
+}
+   .box-table-a tr:hover td{
+        background:#d0dafd;
+        color:#339;
+
+    }
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 180;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 48px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.mobileShow {
+    display: none;
+    text-align:right;
+    float:right;
+}
+
+  /* Smartphone Portrait and Landscape */
+@media screen
+    and (max-width : 768px){
+      .mobileShow {display: inline;}
+  }
+
+.menuStyle{padding-left:0;margin-bottom:0;list-style:none}
+.menuStyle>li{position:relative;display:block;text-align:right}
+.menuStyle>li>a{background:#81DFFE;font-size: 18px;color:#000033;position:relative;display:block;padding:10px 15px}
+.menuStyle>li>a:focus,.menuStyle>li>a:hover{text-decoration:underline;background-color:#eee;color:#000033;}
+
+
+.blurImg {
+  -webkit-animation: haunted2 7s linear infinite;
+}
+
+@keyframes haunted {
+  0% {
+    filter: brightness(20%);
+  }
+  48% {
+    filter: brightness(20%);
+  }
+  50% {
+    filter: sepia(1) contrast(2) brightness(200%);
+  }
+  60% {
+    filter: sepia(1) contrast(2) brightness(200%);
+  }
+  62% {
+    filter: brightness(20%);
+  }
+  96% {
+    filter: brightness(20%);
+  }
+  96% {
+    filter: brightness(400%);
+  }
+}
+
+@-webkit-keyframes haunted2 {
+  0% {
+    -webkit-filter: blur(3px);
+  }
+  10% {
+    -webkit-filter: blur(2.5px);
+  }
+  20% {
+    -webkit-filter: blur(2px);
+  }
+  30% {
+    -webkit-filter: blur(1.5px);
+  }
+  40% {
+    -webkit-filter: blur(1px);
+  }
+  50% {
+    -webkit-filter: blur(0.5px);
+  }
+  60% {
+    -webkit-filter: blur(0px);
+  }
+  70% {
+    -webkit-filter: brightness(150%);
+  }
+  80% {
+    -webkit-filter: brightness(200%);
+  }
+
+}

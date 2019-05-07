@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{% page_attribute 'page_title' %} - AqaratOnline</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static "css/business-casual.css" %}" rel="stylesheet">
+    <link href="{% static "css/animate.min.css" %}" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {% render_block "css" %}
+</head>
+
+<body>
+    {% cms_toolbar %}
+
+
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "200px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+    <table width="50%" >
+        <tr>
+            <td  height="120">
+            </td>
+            <td >
+
+                <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+                    <div class="container">
+                        <div id="mySidenav" class="sidenav mobileShow">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <br><br>
+                            <ul  class="menuStyle animationForMenu">
+                                {% show_menu 0 100 100 100 %}
+                            </ul>
+                    </div>
+                    <div class="container">
+                        <p  class="mobileShow" >
+                            <button type="button">
+                               <span class=" title-text" onclick="openNav()" aligh="right"> القائمة الرئيسية  &#9776;</span>
+                            </button>
+                        </p>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-3 animationForLogo">
+                            <img src="{% static "img/logo.jpg" %}" height="100" width="100%" style="max-width:400px">
+                        </div>
+
+                        <div class="col-sm-9" >
+                            <br>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+
+                                <ul class="nav animationForMenu" >
+                                    {% show_menu 0 100 100 100 %}
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </nav>
+            </div>
+            </td>
+        </tr>
+    </table>
+
+<br>
+
+<div class="container">
+    <div class="row">
+       <div class="col-md-8 ">
+         <br>
+
+                <div class="row"  >
+		            <div class="col-md-12 " >
+		                <table align="right" width="100%" height="100%" style="filter:alpha(opacity=80); opacity:0.8; background-color:#FFFFFF;">
+		                    <tr><td height="10"></td></tr>
+		                    <tr >
+		                        <td width="30%" height="30" align="right" class="title-font">
+                        		    : العقارات
+                        	    </td>
+		                    </tr>
+
+		                    {% if sale %}
+
+		                    <tr >
+		                        <td width="30%" align="right" class="text-font">
+		                            <table align="center" width="95%">
+		                                <tr>
+		                                    <td align="right">
+		                                        {% if kind != '-1' %}
+                        		                 نوع العقار: {{ kind.type }}
+                        		                 {% else %}
+                            		                - :  نوع العقار
+                        		                 {% endif %}
+                    		                 </td>
+                            	       </tr>
+                	       <tr>
+            		            <td align="right">
+                		            {% if place != '-1' %}
+                	                المنطقة: {{ place.place }}
+            		                 {% else %}
+            		                - :   المنطقة
+            		                 {% endif %}
+            		            </td>
+            		      </tr>
+
+    		              {% if area1 or area2  %}
+    		              <tr>
+        		            <td align="right">
+
+        		                المساحة بين : {{ area1 }}
+           		                و:
+        		                 {{ area2 }}
+                                متر مربع
+    		                </td>
+            		       </tr>{% endif %}
+
+        		           {% if price1 or price2 %}
+        	              <tr>
+        		            <td align="right">
+
+        		                السعر بين : {{ price1 }}
+        		                و:
+        		                 {{ price2 }}
+        		                 {% if sale == '1' %}
+        		                 مليون ل.س
+        		                 {% endif %}
+        		                 {% if sale == '2' %}
+        		                 الف ل.س
+        		                 {% endif %}
+
+		                    </td>
+		                </tr>
+		                {% endif %}
+
+                        {% if sale == '1' %}
+                        <tr>
+        		            <td align="right">
+                               للشراء
+     		                </td>
+        		       </tr>
+        		       {% endif %}
+		               {% if sale == '2' %}
+		               <tr>
+		                   <td align="right">
+                            للاجار
+		                   </td>
+		               </tr>
+		               {% endif %}
+
+
+                      {% if floor1 or floor2 %}
+		              <tr>
+		                <td align="right">
+
+    		                الطابق بين : {{ floor1 }}
+    		                و:
+    		                 {{ floor2 }}
+
+		               </td>
+		              </tr>
+		              {% endif %}
+                      {% if fitted == '1' %}
+		              <tr>
+		                <td align="right">
+                            مع إكساء
+		               </td>
+		              </tr>{% endif %}
+
+                      {% if furnished == '1'  %}
+		              <tr>
+		                <td align="right">
+                            مع فرش
+		               </td>
+		              </tr>
+
+		              {% endif %}
+
+                     <tr >
+		                <td width="30%" align="right" class="title-font">
+            		    : نتيجة البحث
+		 </td>
+		 </tr>
+		   </table>
+		 </td>
+		 </tr>
+		 {% endif %}
+		  </table>
+       </div>
+     </div>
+
+ <br>
+{% for item in search_results %}
+
+    <div class="row center-div" >
+		<div class="col-md-12 animationSlideLeft box-shadow2" style="filter:alpha(opacity=95); opacity:0.95; background-color:#FFFFFF;">
+
+		<table align="right" width="100%" height="100%" >
+		 <tr >
+		 <td width="50%" align="right" >
+		     <table width="100%" height="100%">
+		         <tr >
+		 <td>
+		 <img src="/media/{{ item.img1 }}" width="100%">
+		 </td></tr>
+		 </table>
+		 </td>
+		 <td valign="top"style="filter:alpha(opacity=80); opacity:0.8; background-color:#FFFFFF;">
+		   <table align="center" width="80%" class="box-table-a">
+
+		   <tr height="40">
+		    <td class="title-font"> {{ item.name }}
+		    </td>
+		   </tr>
+
+		   <tr height="40">
+		    <td  class="text-font">المنطقة:&nbsp&nbsp {{ item.place }}
+		    </td>
+		   </tr>
+		   <tr height="40">
+		    <td class="text-font">العرض: &nbsp&nbsp
+		        {% if item.forSale %}للبيع
+		       {% else %}للاجار
+		       {% endif %}
+		    </td>
+		   </tr>
+		   {% if item.showPrice %}
+		   <tr height="40">
+		    <td class="text-font">السعر:&nbsp&nbsp {{ item.price }}
+		    </td>
+		   </tr>
+		   {% endif %}
+		   <tr height="40">
+		    <td  class="text-font">المساحة:&nbsp&nbsp {{ item.area }}
+		    </td>
+		   </tr>
+
+		   <tr height="40">
+		    <td ><a class="link-font" href="/propertyDetails/?id={{ item.id }}"  > تفاصيل إضافية</a>
+		    </td>
+		   </tr>
+
+		   </table>
+		 </td>
+		 </tr>
+		 </table>
+
+
+       </div>
+
+   </div>
+
+<br>
+{% endfor %}
+
+
+</div>
+
+<div class="col-md-4" align="right">
+
+<div  align="right">
+
+
+{% include "form.html" %}
+
+        </div>
+      </div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+    <!-- /.container -->
+
+    <footer>
+
+        <div class="container" >
+            <div class="row">
+                <div align="center" >
+                    <br>
+                    <p class="title-font shadow1" style="color:#ffffff;">Copyright &copy; 2018 www.aqarat-online.com</p>
+                    <p class="small-text-font shadow1" style="color:#ffffff;">Designed By IWTS Email: iwts.solutions@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static "js/jquery.js" %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.js" %}"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 3000 //changes the speed
+    })
+    </script>
+    {% render_block "js" %}
+</body>
+
+</html>

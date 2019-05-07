@@ -1,0 +1,117 @@
+
+
+            <form class="form-horizontal" role="form" align="right" valign="top" action="/properties/" method="get">
+                 <h3 align="center" style="filter:alpha(opacity=70); opacity:0.7;background-color:#330000; color:#FFFFFF">البحث عن عقار</h3>
+                <div class="form-group" align="right" style="background-color: rgba(100, 0, 0, 0.2); color:#FFFFFF;">
+
+                    <div class="col-sm-8" align="right">
+                        <select id="kind" name="kind" class="form-control" align="right" >
+                            <option value="-1"></option>
+                            {% for t in PropertyTypes %}
+                            <option value="{{t.id}}">{{t.type}}</option>
+                            {% endfor %}
+
+                        </select>
+                    </div>
+                                <label for="firstName" class="col-sm-4 control-label" style="background-color:#330000;" >نوع العقار</label>
+                </div>
+
+                <div class="form-group" align="right" style="background-color: rgba(100, 0, 0, 0.2); color:#FFFFFF">
+
+                    <div class="col-sm-8" align="right">
+                        <select id="place" name ="place" class="form-control" align="right">
+                            <option value="-1"></option>
+                            {% for p in PropertyPlaces %}
+                            <option value="{{p.id}}">{{p.place}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                                <label for="firstName" class="col-sm-4 control-label" style="background-color:#330000">المنطقة</label>
+                </div>
+
+
+                <div class="form-group" align="right" style="background-color: rgba(100, 0, 0, 0.2); color:#FFFFFF">
+
+                    <div class="col-sm-8" align="right">
+                        <select id="floor" name="floor" class="form-control" align="right">
+                            <option value="-1"></option>
+                            {% for f in PropertyFloors %}
+                            <option value="{{f.id}}">{{f.floor}}</option>
+                            {% endfor %}
+
+                        </select>
+                    </div>
+                                <label for="firstName" class="col-sm-4 control-label" style="background-color:#330000">الطابق</label>
+                </div>
+
+                <div class="form-group" align="right" style="background-color: rgba(100, 0, 0, 0.2); color:#FFFFFF">
+
+                    <div class="col-sm-8" align="right" >
+                        <input type="text" id="area1" name="area1" class="form-control">
+                    </div>
+                                <label for="firstName" class="col-sm-4 control-label" style="background-color:#330000">المساحة بين</label>
+
+
+                    <div class="col-sm-8" align="right">
+                        <input type="text" id="area2" name="area2" class="form-control">
+                    </div>
+                                <label for="firstName" class="col-sm-4 control-label" style="background-color:#330000">و</label>
+                </div>
+
+                <div class="form-group" align="right" style="background-color: rgba(100, 0, 0, 0.2); color:#FFFFFF">
+
+                    <div class="col-sm-8" align="right" >
+                        <input type="text" id="price1" name="price1" class="form-control">
+                    </div>
+                                <label for="firstName" class="col-sm-4 control-label" style="background-color:#330000">السعر بين</label>
+
+
+                    <div class="col-sm-8" align="right">
+                        <input type="text" id="price2" name="price2" class="form-control">
+                    </div>
+                                <label for="firstName" class="col-sm-4 control-label" style="background-color:#330000">و</label>
+                </div>
+
+
+                <div class="form-group" align="right" style="background-color: rgba(100, 0, 0, 0.2); color:#FFFFFF">
+
+                    <div class="col-sm-9">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label class="radio-inline" style="background-color:#330000">
+                                    <input type="radio" name ="sale"  id="sale" value="2" >للأجار
+                                </label>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="radio-inline" style="background-color:#330000">
+                                    <input type="radio" name ="sale" id="sale" value="1" checked="checked">للبيع
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- /.form-group -->
+
+
+                <div class="form-group" align="right" style="background-color: rgba(100, 0, 0, 0.2); color:#FFFFFF">
+                    <div class="col-sm-9">
+                        <div class="checkbox">
+                            <label style="background-color:#330000">
+                                <input type="checkbox" id="fitted" name="fitted" value="1">مع إكساء
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label style="background-color:#330000">
+                                <input type="checkbox" id="furnished" name="furnished" value="1">مع فرش
+                            </label>
+                        </div>
+                    </div>
+                </div> <!-- /.form-group -->
+
+
+                <div class="form-group" align="center">
+                    <div class="col-sm-9 col-sm-offset-3" align="center">
+                        <button type="submit" class="btn btn-primary btn-block">بحث</button>
+                    </div>
+                </div>
+            </form> <!-- /form -->
